@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 700px at 12% -10%, rgba(167, 139, 250, 0.22), transparent 60%),
+    radial-gradient(1100px 700px at 100% 0%, rgba(94, 200, 255, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 50% 120%, rgba(255, 126, 179, 0.16), transparent 60%),
+    #0e1430;
+  color: #eaf0ff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Baloo 2", system-ui, sans-serif;
+}
+
+/* Bubbly scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b357a;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a47a0;
+}
+
+/* Confetti dots */
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  border-radius: 3px;
+  top: -20px;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
